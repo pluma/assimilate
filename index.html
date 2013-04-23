@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>assimilate by pluma</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>assimilate</h1>
+        <p>Extends objects.</p>
+        <p class="view"><a href="https://github.com/pluma/assimilate">View the Project on GitHub <small>pluma/assimilate</small></a></p>
+        <ul>
+          <li><a href="https://github.com/pluma/assimilate/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pluma/assimilate/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pluma/assimilate">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Synopsis</h1>
+
+<p><strong>assimilate</strong> adds the biological and technological distinctiveness of other objects to its own perfection.</p>
+
+<p>In other words, it extends an object with the properties of other objects. In place.</p>
+
+<p><a href="https://ci.testling.com/pluma/assimilate"><img src="https://ci.testling.com/pluma/assimilate.png" alt="browser support"></a></p>
+
+<p><a href="https://travis-ci.org/pluma/assimilate"><img src="https://travis-ci.org/pluma/assimilate.png?branch=master" alt="Build Status"></a></p>
+
+<h1>Another one?</h1>
+
+<p>I admit the idea is hardly novel, but it's amazingly hard to find a library that does just this one thing but works both on npm and with component, has no silly dependencies and follows good practices (like semantic versioning). This may be a case of NIH, but apparently there are many ways to get this simple thing wrong.</p>
+
+<h1>Seriously?</h1>
+
+<p>Yes.</p>
+
+<h1>Install</h1>
+
+<h2>Node.js</h2>
+
+<h3>With NPM</h3>
+
+<div class="highlight"><pre>npm install assimilate
+</pre></div>
+
+<h3>From source</h3>
+
+<div class="highlight"><pre>git clone https://github.com/pluma/assimilate.git
+<span class="nb">cd </span>assimilate
+npm install
+make <span class="o">&amp;&amp;</span> make dist
+</pre></div>
+
+<h2>Browser</h2>
+
+<h3>With component</h3>
+
+<div class="highlight"><pre>component install pluma/assimilate
+</pre></div>
+
+<p><a href="https://github.com/component/component">Learn more about component</a>.</p>
+
+<h3>With bower</h3>
+
+<div class="highlight"><pre>bower install assimilate
+</pre></div>
+
+<p><a href="https://github.com/twitter/bower">Learn more about bower</a>.</p>
+
+<h3>With a CommonJS module loader</h3>
+
+<p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.min.js">latest minified CommonJS release</a> and add it to your project.</p>
+
+<p><a href="http://wiki.commonjs.org/wiki/Modules/1.1">Learn more about CommonJS modules</a>.</p>
+
+<h3>With an AMD module loader</h3>
+
+<p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.amd.min.js">latest minified AMD release</a> and add it to your project.</p>
+
+<p><a href="http://requirejs.org/docs/whyamd.html">Learn more about AMD modules</a>.</p>
+
+<h3>As a standalone library</h3>
+
+<p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.globals.min.js">latest minified standalone release</a> and add it to your project.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/your/js/path/assimilate.globals.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>This makes the <code>assimilate</code> module available in the global namespace.</p>
+
+<h1>Basic usage example</h1>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">assimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">};</span>
+<span class="nx">assimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">src</span><span class="p">);</span>
+<span class="c1">// {a: 1, b: 2, c: 3}</span>
+</pre></div>
+
+<h1>Deep copying example</h1>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">assimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">d</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}}};</span>
+<span class="nx">assimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">e</span><span class="o">:</span> <span class="mi">2</span><span class="p">}}}});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">src</span><span class="p">);</span>
+<span class="c1">// {a: {b: {c: {d: 1, e: 2}}}}</span>
+</pre></div>
+
+<h1>API</h1>
+
+<h2>assimilate([deep], target, sources…):Object</h2>
+
+<p>Extends the target object by applying all properties of each source object in succession, then returns the modified target object.</p>
+
+<p>If <code>deep</code> is a boolean and set to <code>true</code>, existing properties will be extended recursively rather than replaced.</p>
+
+<p>If <code>target</code> is null or undefined, a new object will be used instead. If any of the sources are null or undefined, they will be skipped.</p>
+
+<h1>License</h1>
+
+<p>The MIT/Expat license.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/pluma">pluma</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
