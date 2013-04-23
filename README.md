@@ -45,6 +45,14 @@ component install pluma/assimilate
 
 [Learn more about component](https://github.com/component/component).
 
+### With bower
+
+```sh
+bower install assimilate
+```
+
+[Learn more about bower](https://github.com/twitter/bower).
+
 ### With a CommonJS module loader
 
 Download the [latest minified CommonJS release](https://raw.github.com/pluma/assimilate/master/dist/assimilate.min.js) and add it to your project.
