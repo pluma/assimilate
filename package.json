@@ -1,0 +1,43 @@
+{
+  "name": "assimilate",
+  "author": "Alan Plum <me@pluma.io>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Extends objects.",
+  "keywords": [
+  ],
+  "main": "./dist/assimilate.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.7.x",
+    "expect.js": "0.2.x",
+    "uglify-js": "1.3.x",
+    "jshint": "0.9.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluma/assimilate.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "testling": {
+    "files": "spec/*.js",
+    "harness": "mocha",
+    "browsers": [
+      "chrome/latest",
+      "chrome/canary",
+      "firefox/3.6..4",
+      "firefox/latest",
+      "firefox/nightly",
+      "opera/10",
+      "opera/latest",
+      "opera/next",
+      "safari/4..latest",
+      "ie/6..latest"
+    ]
+  }
+}
