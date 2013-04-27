@@ -110,22 +110,50 @@ make <span class="o">&amp;&amp;</span> make dist
 
 <h1>Deep copying example</h1>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">assimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">);</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">deepAssimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">).</span><span class="nx">withStrategy</span><span class="p">(</span><span class="s1">'deep'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">d</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}}};</span>
-<span class="nx">assimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">e</span><span class="o">:</span> <span class="mi">2</span><span class="p">}}}});</span>
+<span class="nx">deepAssimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">e</span><span class="o">:</span> <span class="mi">2</span><span class="p">}}}});</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">src</span><span class="p">);</span>
 <span class="c1">// {a: {b: {c: {d: 1, e: 2}}}}</span>
 </pre></div>
 
 <h1>API</h1>
 
-<h2>assimilate([deep], target, sources…):Object</h2>
+<h2>assimilate(target, sources…):Object</h2>
 
 <p>Extends the target object by applying all properties of each source object in succession, then returns the modified target object.</p>
 
-<p>If <code>deep</code> is a boolean and set to <code>true</code>, existing properties will be extended recursively rather than replaced.</p>
-
 <p>If <code>target</code> is null or undefined, a new object will be used instead. If any of the sources are null or undefined, they will be skipped.</p>
+
+<h2>assimilate.withStrategy(strategy, [copyInherited]):Function</h2>
+
+<p>Returns a variant of <code>assimilate</code> that uses the given strategy for copying/merging properties.</p>
+
+<p>If <code>strategy</code> is set to a string, it must be a case-insensitive match against a strategy in <code>assimilate.strategies</code> (see below). Otherwise it must be a function that accepts a <code>target</code>, <code>source</code> and <code>key</code> value and performs a copy or merge on the <code>target</code> object.</p>
+
+<p>If <code>copyInherited</code> is set to a value that is equal to <code>true</code>, properties of the sources' prototypes will be copied in addition to their own properties.</p>
+
+<h2>assimilate.strategies</h2>
+
+<p>Contains the built-in copy/merge strategies. These will be performed on the <code>target</code>, <code>source</code> and <code>key</code> for each property <code>key</code> in each <code>source</code> object.</p>
+
+<h3>DEFAULT</h3>
+
+<p>Copies the value of the source's property to the target's property.</p>
+
+<h3>DEEP</h3>
+
+<p>If the target's property already exists and is not inherited from the target's prototype, and both properties' values are objects, the objects will be merged recursively. Otherwise, the target's property will be overwritten.</p>
+
+<h3>STRICT</h3>
+
+<p>If the value of the source's property is not <code>undefined</code>, its value is copied to the target's property.</p>
+
+<h3>FALLBACK</h3>
+
+<p>If the value of the target's property is <code>undefined</code> or the property does not exist, it will be overwritten with the value of the source's property.</p>
+
+<p>This is useful for merging a configuration object with its defaults.</p>
 
 <h1>License</h1>
 
