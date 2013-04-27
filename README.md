@@ -88,22 +88,50 @@ console.log(src);
 # Deep copying example
 
 ```javascript
-var assimilate = require('assimilate');
+var deepAssimilate = require('assimilate').withStrategy('deep');
 var src = {a: {b: {c: {d: 1}}}};
-assimilate(src, {a: {b: {c: {e: 2}}}});
+deepAssimilate(src, {a: {b: {c: {e: 2}}}});
 console.log(src);
 // {a: {b: {c: {d: 1, e: 2}}}}
 ```
 
 # API
 
-## assimilate([deep], target, sources…):Object
+## assimilate(target, sources…):Object
 
 Extends the target object by applying all properties of each source object in succession, then returns the modified target object.
 
-If `deep` is a boolean and set to `true`, existing properties will be extended recursively rather than replaced.
-
 If `target` is null or undefined, a new object will be used instead. If any of the sources are null or undefined, they will be skipped.
+
+## assimilate.withStrategy(strategy, [copyInherited]):Function
+
+Returns a variant of `assimilate` that uses the given strategy for copying/merging properties.
+
+If `strategy` is set to a string, it must be a case-insensitive match against a strategy in `assimilate.strategies` (see below). Otherwise it must be a function that accepts a `target`, `source` and `key` value and performs a copy or merge on the `target` object.
+
+If `copyInherited` is set to a value that is equal to `true`, properties of the sources' prototypes will be copied in addition to their own properties.
+
+## assimilate.strategies
+
+Contains the built-in copy/merge strategies. These will be performed on the `target`, `source` and `key` for each property `key` in each `source` object.
+
+### DEFAULT
+
+Copies the value of the source's property to the target's property.
+
+### DEEP
+
+If the target's property already exists and is not inherited from the target's prototype, and both properties' values are objects, the objects will be merged recursively. Otherwise, the target's property will be overwritten.
+
+### STRICT
+
+If the value of the source's property is not `undefined`, its value is copied to the target's property.
+
+### FALLBACK
+
+If the value of the target's property is `undefined` or the property does not exist, it will be overwritten with the value of the source's property.
+
+This is useful for merging a configuration object with its defaults.
 
 # License
 

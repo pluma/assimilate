@@ -1,10 +1,13 @@
 {
   "name": "assimilate",
   "author": "Alan Plum <me@pluma.io>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "Extends objects.",
   "keywords": [
+    "extend",
+    "inherit",
+    "mixin"
   ],
   "main": "./dist/assimilate.js",
   "dependencies": {},

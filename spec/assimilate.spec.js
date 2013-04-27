@@ -68,22 +68,17 @@ describe('assimilate(target, source1, source2)', function() {
     });
 });
 
-describe('assimilate(boolean)', function() {
-    it('returns the boolean as its target object', function() {
-        expect(assimilate(true)).to.equal(true);
-    });
-});
-
-describe('assimilate(true, target, source)', function() {
+describe('assimilate.withStrategy("deep")(target, source)', function() {
+    var deepAssimilate = assimilate.withStrategy('deep');
     it('returns the target object', function() {
         var target = {a: {b: 2}},
             src = {a: {c: 3}};
-        expect(assimilate(true, target, src)).to.equal(target);
+        expect(deepAssimilate(target, src)).to.equal(target);
     });
     it('merges existing properties recursively', function() {
         var target = {a: {b: {c: 1, d: 2}}},
             src = {a: {b: {c: 0, e: 3}}};
-        expect(assimilate(true, target, src)).to.eql({
+        expect(deepAssimilate(target, src)).to.eql({
             a: {b: {c: 0, d: 2, e: 3}}
         });
     });
