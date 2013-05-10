@@ -6,7 +6,7 @@ In other words, it extends an object with the properties of other objects. In pl
 
 [![browser support](https://ci.testling.com/pluma/assimilate.png)](https://ci.testling.com/pluma/assimilate)
 
-[![Build Status](https://travis-ci.org/pluma/assimilate.png?branch=master)](https://travis-ci.org/pluma/assimilate) [![NPM version](https://badge.fury.io/js/assimilate.png)](http://badge.fury.io/js/assimilate) [![Dependencies](https://david-dm.org/pluma/assimilate.png)](https://david-dm.org/pluma/assimilate)
+[![Build Status](https://travis-ci.org/pluma/assimilate.png?branch=master)](https://travis-ci.org/pluma/assimilate) [![NPM version](https://badge.fury.io/js/assimilate.png)](http://badge.fury.io/js/assimilate)
 
 # Another one?
 
