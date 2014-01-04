@@ -155,6 +155,6 @@ Copies the values of all properties of the source that do not already exist or a
 
 This can be useful for merging a configuration object with its defaults.
 
-# License
+# Unlicense
 
-The MIT/Expat license.
+This is free and unencumbered public domain software. For more information, see http://unlicense.org/ or the accompanying [UNLICENSE](https://github.com/pluma/assimilate/blob/master/UNLICENSE) file.

@@ -1,7 +1,7 @@
 {
   "name": "assimilate",
-  "version": "0.3.0",
-  "license": "MIT",
+  "version": "0.3.1",
+  "license": "UNLICENSE",
   "repo": "pluma/assimilate",
   "description": "Extends objects.",
   "keywords": [

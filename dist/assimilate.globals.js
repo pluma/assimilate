@@ -1,4 +1,4 @@
-/*! assimilate 0.3.0 Copyright (c) 2013 Alan Plum. MIT licensed. */
+/*! assimilate 0.3.1 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
 (function(root){var module={};
 var slice = Array.prototype.slice;
 
