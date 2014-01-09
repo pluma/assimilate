@@ -1,33 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>assimilate by pluma</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="assimilate : extends objects" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>assimilate</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>assimilate</h1>
-        <p>Extends objects.</p>
-        <p class="view"><a href="https://github.com/pluma/assimilate">View the Project on GitHub <small>pluma/assimilate</small></a></p>
-        <ul>
-          <li><a href="https://github.com/pluma/assimilate/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pluma/assimilate/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pluma/assimilate">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Synopsis</h1>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pluma/assimilate">View on GitHub</a>
+
+          <h1 id="project_title">assimilate</h1>
+          <h2 id="project_tagline">extends objects</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pluma/assimilate/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pluma/assimilate/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="synopsis" class="anchor" href="#synopsis"><span class="octicon octicon-link"></span></a>Synopsis</h1>
 
 <p><strong>assimilate</strong> adds the biological and technological distinctiveness of other objects to its own perfection.</p>
 
@@ -35,136 +40,188 @@
 
 <p><a href="https://ci.testling.com/pluma/assimilate"><img src="https://ci.testling.com/pluma/assimilate.png" alt="browser support"></a></p>
 
-<p><a href="https://travis-ci.org/pluma/assimilate"><img src="https://travis-ci.org/pluma/assimilate.png?branch=master" alt="Build Status"></a></p>
+<p><a href="https://travis-ci.org/pluma/assimilate"><img src="https://travis-ci.org/pluma/assimilate.png?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/js/assimilate"><img src="https://badge.fury.io/js/assimilate.png" alt="NPM version"></a> <a href="https://david-dm.org/pluma/assimilate"><img src="https://david-dm.org/pluma/assimilate.png" alt="Dependencies"></a></p>
 
-<h1>Another one?</h1>
+<h1>
+<a name="another-one" class="anchor" href="#another-one"><span class="octicon octicon-link"></span></a>Another one?</h1>
 
 <p>I admit the idea is hardly novel, but it's amazingly hard to find a library that does just this one thing but works both on npm and with component, has no silly dependencies and follows good practices (like semantic versioning). This may be a case of NIH, but apparently there are many ways to get this simple thing wrong.</p>
 
-<h1>Seriously?</h1>
+<p>Also, as of version 0.3.0, assimilate comes with a strategy for copying property descriptors, which is useful if you're not stuck in IE8 and want to use modern language features. If you <em>are</em> stuck in IE8, all the other strategies should work just fine.</p>
+
+<h1>
+<a name="seriously" class="anchor" href="#seriously"><span class="octicon octicon-link"></span></a>Seriously?</h1>
 
 <p>Yes.</p>
 
-<h1>Install</h1>
+<h1>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h1>
 
-<h2>Node.js</h2>
+<h2>
+<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>Node.js</h2>
 
-<h3>With NPM</h3>
+<h3>
+<a name="with-npm" class="anchor" href="#with-npm"><span class="octicon octicon-link"></span></a>With NPM</h3>
 
-<div class="highlight"><pre>npm install assimilate
+<div class="highlight highlight-sh"><pre>npm install assimilate
 </pre></div>
 
-<h3>From source</h3>
+<h3>
+<a name="from-source" class="anchor" href="#from-source"><span class="octicon octicon-link"></span></a>From source</h3>
 
-<div class="highlight"><pre>git clone https://github.com/pluma/assimilate.git
+<div class="highlight highlight-sh"><pre>git clone https://github.com/pluma/assimilate.git
 <span class="nb">cd </span>assimilate
 npm install
-make <span class="o">&amp;&amp;</span> make dist
+make dist <span class="o">&amp;&amp;</span> make
 </pre></div>
 
-<h2>Browser</h2>
+<h2>
+<a name="browser" class="anchor" href="#browser"><span class="octicon octicon-link"></span></a>Browser</h2>
 
-<h3>With component</h3>
+<h3>
+<a name="with-component" class="anchor" href="#with-component"><span class="octicon octicon-link"></span></a>With component</h3>
 
-<div class="highlight"><pre>component install pluma/assimilate
+<div class="highlight highlight-sh"><pre>component install pluma/assimilate
 </pre></div>
 
 <p><a href="https://github.com/component/component">Learn more about component</a>.</p>
 
-<h3>With bower</h3>
+<h3>
+<a name="with-bower" class="anchor" href="#with-bower"><span class="octicon octicon-link"></span></a>With bower</h3>
 
-<div class="highlight"><pre>bower install assimilate
+<div class="highlight highlight-sh"><pre>bower install assimilate
 </pre></div>
 
 <p><a href="https://github.com/twitter/bower">Learn more about bower</a>.</p>
 
-<h3>With a CommonJS module loader</h3>
+<h3>
+<a name="with-a-commonjs-module-loader" class="anchor" href="#with-a-commonjs-module-loader"><span class="octicon octicon-link"></span></a>With a CommonJS module loader</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.min.js">latest minified CommonJS release</a> and add it to your project.</p>
 
 <p><a href="http://wiki.commonjs.org/wiki/Modules/1.1">Learn more about CommonJS modules</a>.</p>
 
-<h3>With an AMD module loader</h3>
+<h3>
+<a name="with-an-amd-module-loader" class="anchor" href="#with-an-amd-module-loader"><span class="octicon octicon-link"></span></a>With an AMD module loader</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.amd.min.js">latest minified AMD release</a> and add it to your project.</p>
 
 <p><a href="http://requirejs.org/docs/whyamd.html">Learn more about AMD modules</a>.</p>
 
-<h3>As a standalone library</h3>
+<h3>
+<a name="as-a-standalone-library" class="anchor" href="#as-a-standalone-library"><span class="octicon octicon-link"></span></a>As a standalone library</h3>
 
 <p>Download the <a href="https://raw.github.com/pluma/assimilate/master/dist/assimilate.globals.min.js">latest minified standalone release</a> and add it to your project.</p>
 
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/your/js/path/assimilate.globals.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/your/js/path/assimilate.globals.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 
 <p>This makes the <code>assimilate</code> module available in the global namespace.</p>
 
-<h1>Basic usage example</h1>
+<h1>
+<a name="basic-usage-example" class="anchor" href="#basic-usage-example"><span class="octicon octicon-link"></span></a>Basic usage example</h1>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">assimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">};</span>
-<span class="nx">assimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">});</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">src</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">assimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">};</span>
+<span class="nx">assimilate</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
 <span class="c1">// {a: 1, b: 2, c: 3}</span>
 </pre></div>
 
-<h1>Deep copying example</h1>
+<h1>
+<a name="deep-copying-example" class="anchor" href="#deep-copying-example"><span class="octicon octicon-link"></span></a>Deep copying example</h1>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">deepAssimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">).</span><span class="nx">withStrategy</span><span class="p">(</span><span class="s1">'deep'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">d</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}}};</span>
-<span class="nx">deepAssimilate</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">e</span><span class="o">:</span> <span class="mi">2</span><span class="p">}}}});</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">src</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">deepAssimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">).</span><span class="nx">withStrategy</span><span class="p">(</span><span class="s1">'deep'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">d</span><span class="o">:</span> <span class="mi">1</span><span class="p">}}}};</span>
+<span class="nx">deepAssimilate</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">e</span><span class="o">:</span> <span class="mi">2</span><span class="p">}}}});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
 <span class="c1">// {a: {b: {c: {d: 1, e: 2}}}}</span>
 </pre></div>
 
-<h1>API</h1>
+<h1>
+<a name="property-descriptor-example" class="anchor" href="#property-descriptor-example"><span class="octicon octicon-link"></span></a>Property descriptor example</h1>
 
-<h2>assimilate(target, sources…):Object</h2>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">properAssimilate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'assimilate'</span><span class="p">).</span><span class="nx">withStrategy</span><span class="p">(</span><span class="s1">'proper'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="mi">1</span><span class="p">};</span>
+<span class="nx">properAssimilate</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="p">{</span><span class="nx">get</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="mi">2</span><span class="p">;}});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+<span class="c1">// {b: 1, a: [Getter]}</span>
+</pre></div>
+
+<h1>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h1>
+
+<h2>
+<a name="assimilatetarget-sourcesobject" class="anchor" href="#assimilatetarget-sourcesobject"><span class="octicon octicon-link"></span></a>assimilate(target, sources…):Object</h2>
 
 <p>Extends the target object by applying all properties of each source object in succession, then returns the modified target object.</p>
 
 <p>If <code>target</code> is null or undefined, a new object will be used instead. If any of the sources are null or undefined, they will be skipped.</p>
 
-<h2>assimilate.withStrategy(strategy, [copyInherited]):Function</h2>
+<p>This function is the equivalent of <code>assimilate.withStrategy('default')</code>.</p>
+
+<h2>
+<a name="assimilatewithstrategystrategyfunction" class="anchor" href="#assimilatewithstrategystrategyfunction"><span class="octicon octicon-link"></span></a>assimilate.withStrategy(strategy):Function</h2>
 
 <p>Returns a variant of <code>assimilate</code> that uses the given strategy for copying/merging properties.</p>
 
-<p>If <code>strategy</code> is set to a string, it must be a case-insensitive match against a strategy in <code>assimilate.strategies</code> (see below). Otherwise it must be a function that accepts a <code>target</code>, <code>source</code> and <code>key</code> value and performs a copy or merge on the <code>target</code> object.</p>
+<p>If <code>strategy</code> is set to a string, it must be a case-insensitive match against a strategy in <code>assimilate.strategies</code> (see below). Otherwise it must be an object with a method <code>keysFn</code> that accepts an object and returns an array of property names, and a method <code>copyFn</code> that accepts a <code>target</code>, <code>key</code> and <code>source</code> value and performs a copy or merge on the <code>target</code> object.</p>
 
-<p>If <code>copyInherited</code> is set to a value that is equal to <code>true</code>, properties of the sources' prototypes will be copied in addition to their own properties.</p>
-
-<h2>assimilate.strategies</h2>
+<h2>
+<a name="assimilatestrategies" class="anchor" href="#assimilatestrategies"><span class="octicon octicon-link"></span></a>assimilate.strategies</h2>
 
 <p>Contains the built-in copy/merge strategies. These will be performed on the <code>target</code>, <code>source</code> and <code>key</code> for each property <code>key</code> in each <code>source</code> object.</p>
 
-<h3>DEFAULT</h3>
+<h3>
+<a name="default" class="anchor" href="#default"><span class="octicon octicon-link"></span></a>DEFAULT</h3>
 
-<p>Copies the value of the source's property to the target's property.</p>
+<p>Copies the values of all properties of the source to the target, except for inherited properties.</p>
 
-<h3>DEEP</h3>
+<h3>
+<a name="proper" class="anchor" href="#proper"><span class="octicon octicon-link"></span></a>PROPER</h3>
 
-<p>If the target's property already exists and is not inherited from the target's prototype, and both properties' values are objects, the objects will be merged recursively. Otherwise, the target's property will be overwritten.</p>
+<p>Defines all of the source's own properties on the target object using the source's property descriptors.</p>
 
-<h3>STRICT</h3>
+<p>This can be used to copy the source's getters and setters rather than their current values.</p>
 
-<p>If the value of the source's property is not <code>undefined</code>, its value is copied to the target's property.</p>
+<h3>
+<a name="inherited" class="anchor" href="#inherited"><span class="octicon octicon-link"></span></a>INHERITED</h3>
 
-<h3>FALLBACK</h3>
+<p>Copies the values of all properties of the source to the target, including inherited properties.</p>
 
-<p>If the value of the target's property is <code>undefined</code> or the property does not exist, it will be overwritten with the value of the source's property.</p>
+<h3>
+<a name="deep" class="anchor" href="#deep"><span class="octicon octicon-link"></span></a>DEEP</h3>
 
-<p>This is useful for merging a configuration object with its defaults.</p>
+<p>Copies the values of all properties of the source to the target, except for inherited properties. If the property already exists and both values are objects, the object's properties will be merged recursively.</p>
 
-<h1>License</h1>
+<h3>
+<a name="strict" class="anchor" href="#strict"><span class="octicon octicon-link"></span></a>STRICT</h3>
 
-<p>The MIT/Expat license.</p>
+<p>Copies the values of all properties of the source to the target, except for inherited properties. If the source property's value is <code>undefined</code>, it will be skipped.</p>
+
+<h3>
+<a name="fallback" class="anchor" href="#fallback"><span class="octicon octicon-link"></span></a>FALLBACK</h3>
+
+<p>Copies the values of all properties of the source that do not already exist or are set to <code>undefined</code> on the target, except inherited properties.</p>
+
+<p>This can be useful for merging a configuration object with its defaults.</p>
+
+<h1>
+<a name="unlicense" class="anchor" href="#unlicense"><span class="octicon octicon-link"></span></a>Unlicense</h1>
+
+<p>This is free and unencumbered public domain software. For more information, see <a href="http://unlicense.org/">http://unlicense.org/</a> or the accompanying <a href="https://github.com/pluma/assimilate/blob/master/UNLICENSE">UNLICENSE</a> file.</p>
       </section>
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/pluma">pluma</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">assimilate maintained by <a href="https://github.com/pluma">pluma</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
