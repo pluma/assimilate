@@ -28,7 +28,8 @@
     "url": "https://github.com/pluma/assimilate.git"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "coveralls": "make coveralls"
   },
   "engines": {
     "node": ">=0.6"
