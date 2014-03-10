@@ -1,4 +1,4 @@
-/*! assimilate 0.3.1 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
+/*! assimilate 0.4.0 Original author Alan Plum <me@pluma.io>. Released into the Public Domain under the UNLICENSE. @preserve */
 define(function() {var module = {};
 var slice = Array.prototype.slice;
 

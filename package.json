@@ -1,7 +1,7 @@
 {
   "name": "assimilate",
   "author": "Alan Plum <me@pluma.io>",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Extends objects.",
   "licenses": {
     "type": "UNLICENSE",
@@ -16,10 +16,12 @@
   "main": "./dist/assimilate.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.16",
-    "expect.js": "~0.2",
+    "mocha": "~1.17",
+    "expect.js": "~0.3",
     "uglify-js": "~2.4",
-    "jshint": "~2.4"
+    "jshint": "~2.4",
+    "istanbul": "~0.2",
+    "coveralls": "~2.8"
   },
   "repository": {
     "type": "git",

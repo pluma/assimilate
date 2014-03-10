@@ -4,9 +4,14 @@
 
 In other words, it extends an object with the properties of other objects. In place.
 
+[![stability 3 - stable](http://b.repl.ca/v1/stability-3_--_stable-yellowgreen.png)
+](http://nodejs.org/api/documentation.html#documentation_stability_index) [![license - Unlicense](http://b.repl.ca/v1/license-Unlicense-lightgrey.png)](http://unlicense.org/) [![Flattr this](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=pluma&url=https://github.com/pluma/assimilate)
+
 [![browser support](https://ci.testling.com/pluma/assimilate.png)](https://ci.testling.com/pluma/assimilate)
 
-[![Build Status](https://travis-ci.org/pluma/assimilate.png?branch=master)](https://travis-ci.org/pluma/assimilate) [![NPM version](https://badge.fury.io/js/assimilate.png)](http://badge.fury.io/js/assimilate) [![Dependencies](https://david-dm.org/pluma/assimilate.png)](https://david-dm.org/pluma/assimilate)
+[![Build Status](https://travis-ci.org/pluma/assimilate.png?branch=master)](https://travis-ci.org/pluma/assimilate) [![Coverage Status](https://coveralls.io/repos/pluma/assimilate/badge.png?branch=master)](https://coveralls.io/r/pluma/assimilate?branch=master) [![Dependencies](https://david-dm.org/pluma/assimilate.png?theme=shields.io)](https://david-dm.org/pluma/assimilate)
+
+[![NPM status](https://nodei.co/npm/assimilate.png?compact=true)](https://npmjs.org/package/assimilate)
 
 # Another one?
 
